@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3C94D1</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="black_overlay">#66000000</color>
+    <!-- Screens background color-->
+    <color name="bg_slider_color">#F5F6F7</color>
+    <color name="penjelasan_warna_text">#a8a8a8</color>
+    <color name="fitur_warna_text">#2A2B2D</color>
+    <!--warna dot active-->
+    <color name="dotsActive">#3C94D1</color>
+    <!--warna dot inactive-->
+    <color name="dotsInactive">#CACBCB</color>
+    <array name="array_dot_active">
+        <item>@color/dotsActive</item>
+        <item>@color/dotsActive</item>
+        <item>@color/dotsActive</item>
+        <item>@color/dotsActive</item>
+    </array>
+    <array name="array_dot_inactive">
+        <item>@color/dotsInactive</item>
+        <item>@color/dotsInactive</item>
+        <item>@color/dotsInactive</item>
+        <item>@color/dotsInactive</item>
+    </array>
+
+
+
+</resources>

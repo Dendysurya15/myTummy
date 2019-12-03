@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp">
+
+            <View
+                android:id="@+id/back_jumbotron"
+                android:layout_width="wrap_content"
+                android:background="#3C94D1"
+                android:layout_height="170dp" />
+
+            <TextView
+                android:id="@+id/title_app"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Selamat Datang,"
+                android:textSize="16dp"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/font_barruuu"/>
+            <TextView
+                android:id="@+id/title_app2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pada aplikasi diagnosis My Tummy!"
+                android:layout_below="@id/title_app"
+                android:textSize="19dp"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/font_barruuu"/>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_diagnosis"
+                android:layout_width="match_parent"
+                android:layout_height="171dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginRight="20dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:id="@+id/image_diagnosis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/stomachache" />
+                    <View
+                        android:id="@+id/overlay1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/black_overlay"/>
+
+                    <TextView
+                        android:id="@+id/fitur_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom"
+                        android:fontFamily="@font/font_barruuu"
+                        android:layout_marginBottom="45dp"
+                        android:layout_marginLeft="8dp"
+                        android:textSize="20sp"
+                        android:textColor="#ffffff"
+                        android:text="Diagnosis Penyakit Perut" />
+
+                    <TextView
+                        android:id="@+id/penjelasan_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/font_barruuu"
+                        android:layout_margin="8dp"
+                        android:textColor="#ffffff"
+                        android:text="@string/diagnosis_perut" />
+
+               <!--     <Button
+                        android:id="@+id/button_diagnosis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginRight="4dp"
+                        android:textColor="#3C94D1"
+                        android:layout_marginBottom="2dp"
+                        android:backgroundTint="#ffffff"
+                        android:text="Button" />-->
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_tindak"
+                android:layout_below="@id/card_diagnosis"
+                android:layout_width="match_parent"
+                android:layout_height="171dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:id="@+id/image_tindak_lanjut"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/tindak_lanjut" />
+
+                    <View
+                        android:id="@+id/overlay2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/black_overlay" />
+
+                    <TextView
+                        android:id="@+id/fitur_image2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="60dp"
+                        android:layout_marginLeft="8dp"
+                        android:gravity="bottom"
+                        android:fontFamily="@font/font_barruuu"
+                        android:textSize="20sp"
+                        android:text="Tindak Lanjut Penyakit Perut"
+                        android:textColor="#ffffff"
+                         />
+
+                    <TextView
+                        android:id="@+id/penjelasan_image2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom"
+                        android:fontFamily="@font/font_barruuu"
+                        android:layout_alignBottom="@id/image_tindak_lanjut"
+                        android:layout_margin="8dp"
+                        android:textSize="12sp"
+                        android:text="@string/tindak_lanjut"
+                        android:textColor="#ffffff" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_obat"
+                android:layout_below="@id/card_tindak"
+                android:layout_width="match_parent"
+                android:layout_height="171dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:id="@+id/image_rekomendasi_obat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/rekomendasi_obat" />
+
+                    <View
+                        android:id="@+id/overlay3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/black_overlay" />
+
+                    <TextView
+                        android:id="@+id/fitur_image3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom"
+                        android:layout_marginBottom="45dp"
+                        android:layout_marginLeft="8dp"
+                        android:text="Rekomendasi Obat"
+                        android:fontFamily="@font/font_barruuu"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/penjelasan_image3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom"
+                        android:fontFamily="@font/font_barruuu"
+                        android:layout_margin="8dp"
+                        android:textSize="12sp"
+                        android:text="@string/rekomendasi_text"
+                        android:textColor="#ffffff" />
+
+                </RelativeLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_edukasi"
+                android:layout_below="@id/card_obat"
+                android:layout_width="match_parent"
+                android:layout_height="171dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:id="@+id/image_edukasi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/doctor_explain" />
+
+                    <View
+                        android:id="@+id/overlay4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/black_overlay" />
+
+                    <TextView
+                        android:id="@+id/fitur_image4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginBottom="75dp"
+                        android:gravity="bottom"
+                        android:fontFamily="@font/font_barruuu"
+                        android:text="Edukasi Seputar Penyakit Perut"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/penjelasan_image4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom"
+                        android:fontFamily="@font/font_barruuu"
+                        android:layout_margin="8dp"
+                        android:textSize="12sp"
+                        android:text="@string/edukasi_text"
+                        android:textColor="#ffffff" />
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>
