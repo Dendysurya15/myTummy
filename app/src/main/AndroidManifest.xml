@@ -4,12 +4,16 @@
 
     <application
         android:allowBackup="true"
-        android:label="My Tummy"
         android:icon="@drawable/icon_laucher_insyallah_fix"
+        android:label="My Tummy"
         android:roundIcon="@drawable/icon_laucher_insyallah_fix"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AboutUsFragment"></activity>
+        <activity android:name=".Fitur_Edukasi"></activity>
+        <activity android:name=".Fitur_Rekomendasi_Obat" />
+        <activity android:name=".Fitur_Tindak_lanjut" />
+        <activity android:name=".Fitur_Diagnosis" />
+        <activity android:name=".AboutUsFragment" />
         <activity android:name=".HomeFragment" />
         <activity
             android:name=".IntroSlider"
@@ -23,7 +27,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:label="">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

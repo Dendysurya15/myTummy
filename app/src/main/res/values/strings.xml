@@ -1,11 +1,33 @@
 <resources>
-    <string name="app_name">My Tummy</string>
+    <array name="image_card">
+        <item>@drawable/stomachache</item>
+        <item>@drawable/tindak_lanjut</item>
+        <item>@drawable/rekomendasi_obat</item>
+        <item>@drawable/doctor_explain</item>
+    </array>
 
+    <array name="judul_card">
+        <item>Diagnosis Penyakit Perut</item>
+        <item>Tindak Lanjut Penyakit Perut</item>
+        <item>Rekomendasi Obat</item>
+        <item>Edukasi Seputar Penyakit Perut</item>
+    </array>
+    <array name="penjelasan_card">
+        <item>@string/diagnosis_perut</item>
+        <item>@string/tindak_lanjut</item>
+        <item>@string/rekomendasi_text</item>
+        <item>@string/edukasi_text</item>
+    </array>
+    <string name="app_name">My Tummy</string>
     <string name="title_activity_splash_screen">SplashScreen</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="diagnosis_perut">Pengguna dapat mengetahui penyakit perut yang sedang dialami berdasarkan gejala yang dirasakan</string>
+
+
     <string name="tindak_lanjut">Pengguna dapat mengetahui langkah-langkah yang sebaiknya dilakukan saat mengalami penyakit perut tertentu</string>
+
     <string name="rekomendasi_text">Pengguna dapat mengetahui obat-obat apa saja yang cocok sesuai dengan penyakit perut yang sedang dicari</string>
+
     <string name="edukasi_text">Pengguna dapat mengetahui lebih lengkap dan jelas tentang macam-macam penyakit perut seperti nama latin, gejala-gejala penyakit, penangangan pertama, rekomendasi obat dan lainnya</string>
 </resources>
