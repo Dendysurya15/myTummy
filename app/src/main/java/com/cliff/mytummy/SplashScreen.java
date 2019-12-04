@@ -32,7 +32,7 @@ public class SplashScreen extends AppCompatActivity {
             @Override
             public void run() {
                 try{
-                    sleep(3500);
+                    sleep(1500);
                     Intent intent = new Intent(SplashScreen.this,IntroSlider.class);
                     startActivity(intent);
                     finish();
