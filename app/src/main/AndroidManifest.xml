@@ -9,22 +9,21 @@
         android:roundIcon="@drawable/icon_laucher_insyallah_fix"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Fitur_Rekomendasi_Obat_Baru"
+            android:label="Rekomendasi Obat"
+            android:parentActivityName=".MainActivity"></activity>
         <activity
             android:name=".Fitur_Edukasi"
             android:label="Edukasi Seputar Penyakit Perut"
-            android:parentActivityName=".MainActivity"></activity>
-        <activity
-            android:name=".Fitur_Rekomendasi_Obat"
-            android:label="Rekomendasi Obat"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".Fitur_Tindak_lanjut"
             android:label="Tindak Lanjut Penyakit Perut"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".Fitur_Diagnosis"
             android:label="Diagnosis Penyakit Perut"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".AboutUsFragment" />
         <activity android:name=".HomeFragment" />
         <activity
