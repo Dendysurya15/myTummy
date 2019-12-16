@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "933422605606",
+    "firebase_url": "https://mytummy-cc66d.firebaseio.com",
+    "project_id": "mytummy-cc66d",
+    "storage_bucket": "mytummy-cc66d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:933422605606:android:ea8f0375e214209bbe8de7",
+        "android_client_info": {
+          "package_name": "com.cliff.mytummy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "933422605606-mh9sqjgaeb89cdq0gupj51rvv32s5s35.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfZ8ml7joJe33nQoI0PxLLPIGoiuU8ry8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "933422605606-mh9sqjgaeb89cdq0gupj51rvv32s5s35.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3a8dc7"
+    tools:context=".Fitur_Diagnosis">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <View
+                android:id="@+id/notice_back"
+                android:layout_width="wrap_content"
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/shape"
+                />
+
+            <ImageView
+                android:id="@+id/info"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="17dp"
+                android:layout_marginLeft="20dp"
+                android:layout_alignParentStart="true"
+                app:srcCompat="@drawable/info" />
+
+            <TextView
+                android:id="@+id/petunjuk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/info"
+                style="@style/TextAppearance.AppCompat.Headline"
+                android:fontFamily="@font/font_barruuu"
+                android:layout_marginStart="40dp"
+                android:textSize="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:text="Petunjuk:" />
+
+
+            <TextView
+                android:id="@+id/notice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/info"
+                android:layout_below="@id/petunjuk"
+                android:lineSpacingExtra="4dp"
+                android:fontFamily="@font/font_barruuu"
+                android:textSize="15sp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/notice" />
+
+
+            <RelativeLayout
+                android:id="@+id/r_soal1"
+                android:layout_width="match_parent"
+                android:layout_below="@id/notice_back"
+                android:background="@drawable/shape"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="10dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/index_soal1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.AppCompat.Headline"
+                    android:fontFamily="@font/font_barruuu"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="20dp"
+                    android:text="Soal 1" />
+                <!--soal1-->
+                <TextView
+                    android:id="@+id/soal1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_below="@id/index_soal1"
+                    android:lineSpacingExtra="4dp"
+                    android:textSize="18sp"
+                    android:text="@string/soal1" />
+
+                <CheckBox
+                    android:id="@+id/nyeri_ulu_hati"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/soal1"
+                    style="@style/color_checkbox"
+                    android:textSize="16dp"
+                    android:textColor="#757575"
+                    android:text="@string/pil_soal1_1" />
+
+                <CheckBox
+                    android:id="@+id/nyeri_kanan_bawah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/color_checkbox"
+                    android:textSize="16dp"
+                    android:textColor="#757575"
+                    android:layout_below="@id/nyeri_ulu_hati"
+                    android:text="@string/pil_soal1_2" />
+                <CheckBox
+                    android:id="@+id/nyeri_kiri_bawah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    style="@style/color_checkbox"
+                    android:textColor="#757575"
+                    android:layout_below="@id/nyeri_kanan_bawah"
+                    android:text="@string/pil_soal1_3" />
+                <CheckBox
+                    android:id="@+id/nyeri_punggung"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:textColor="#757575"
+                    style="@style/color_checkbox"
+                    android:layout_below="@id/nyeri_kiri_bawah"
+                    android:text="@string/pil_soal1_4" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/r_soal2"
+                android:layout_width="match_parent"
+                android:layout_below="@id/r_soal1"
+                android:background="@drawable/shape"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="10dp"
+                android:layout_height="wrap_content">
+
+<!-- soal 2-->
+                <TextView
+                    android:id="@+id/index_soal2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.AppCompat.Headline"
+                    android:fontFamily="@font/font_barruuu"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="20dp"
+                    android:text="Soal 2" />
+
+                <TextView
+                    android:id="@+id/soal2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/index_soal2"
+                    android:layout_margin="10dp"
+                    android:lineSpacingExtra="4dp"
+                    android:textSize="18sp"
+                    android:text="@string/soal2" />
+
+                <CheckBox
+                    android:id="@+id/mual"
+                    style="@style/color_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/soal2"
+                    android:textSize="16dp"
+                    android:textColor="#757575"
+                    android:text="@string/pil_soal2_1" />
+
+                <CheckBox
+                    android:id="@+id/muntah"
+                    style="@style/color_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:textColor="#757575"
+                    android:layout_below="@id/mual"
+                    android:text="@string/pil_soal2_2" />
+
+        </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/r_soal3"
+                android:layout_width="match_parent"
+                android:layout_below="@id/r_soal2"
+                android:background="@drawable/shape"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="10dp"
+                android:layout_height="wrap_content">
+
+
+                <!-- soal 3-->
+                <TextView
+                    android:id="@+id/index_soal3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.AppCompat.Headline"
+                    android:fontFamily="@font/font_barruuu"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="20dp"
+                    android:text="Soal 3" />
+
+                <TextView
+                    android:id="@+id/soal3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_below="@id/index_soal3"
+                    android:lineSpacingExtra="4dp"
+                    android:textSize="18sp"
+                    android:text="@string/soal3" />
+
+                <RadioGroup
+                    android:id="@+id/radio_soal3"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@id/soal3"
+                    android:layout_height="wrap_content" >
+                    <RadioButton
+                        android:id="@+id/sendawa_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        style="@style/color_checkbox"
+                        android:textColor="#757575"
+                        android:text="@string/pil_soal3_1"
+                        />
+
+                    <RadioButton
+                        android:id="@+id/sendawa_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        style="@style/color_checkbox"
+                        android:textColor="#757575"
+                        android:text="@string/pil_soal3_2" />
+                </RadioGroup>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/r_soal4"
+                android:layout_width="match_parent"
+                android:layout_below="@id/r_soal3"
+                android:background="@drawable/shape"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="10dp"
+                android:layout_height="wrap_content">
+
+<!--4-->
+                <TextView
+                    android:id="@+id/index_soal4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.AppCompat.Headline"
+                    android:fontFamily="@font/font_barruuu"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="20dp"
+                    android:text="Soal 4" />
+                <TextView
+                    android:id="@+id/soal4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/index_soal4"
+                    android:layout_margin="10dp"
+                    android:lineSpacingExtra="4dp"
+                    android:textSize="18sp"
+                    android:text="@string/soal4" />
+
+                <CheckBox
+                    android:id="@+id/kram"
+                    style="@style/color_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/soal4"
+                    android:textSize="16dp"
+                    android:textColor="#757575"
+                    android:text="@string/pil_soal4_1" />
+
+                <CheckBox
+                    android:id="@+id/kembung"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:textColor="#757575"
+                    style="@style/color_checkbox"
+                    android:layout_below="@id/kram"
+                    android:text="@string/pil_soal4_2" />
+                <CheckBox
+                    android:id="@+id/mulas"
+                    style="@style/color_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:textColor="#757575"
+                    android:layout_below="@id/kembung"
+                    android:text="@string/pil_soal4_3" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/r_soal5"
+                android:layout_width="match_parent"
+                android:layout_below="@id/r_soal4"
+                android:background="@drawable/shape"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="10dp"
+                android:layout_height="wrap_content">
+
+
+
+                <!-- soal5 -->
+
+                <TextView
+                    android:id="@+id/index_soal5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.AppCompat.Headline"
+                    android:fontFamily="@font/font_barruuu"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="20dp"
+                    android:text="Soal 5" />
+
+                <TextView
+                    android:id="@+id/soal5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_below="@id/index_soal5"
+                    android:lineSpacingExtra="4dp"
+                    android:textSize="18sp"
+                    android:text="@string/soal5" />
+
+                <RadioGroup
+                    android:id="@+id/radio_soal5"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@id/soal5"
+                    android:layout_height="wrap_content" >
+                    <RadioButton
+                        android:id="@+id/buang_gas1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        style="@style/color_checkbox"
+                        android:textColor="#757575"
+                        android:text="@string/pil_soal5_1"
+                        />
+
+                    <RadioButton
+                        android:id="@+id/buang_gas2"
+                        style="@style/color_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        android:textColor="#757575"
+                        android:text="@string/pil_soal5_2" />
+                </RadioGroup>
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/r_soal6"
+                android:layout_width="match_parent"
+                android:layout_below="@id/r_soal5"
+                android:background="@drawable/shape"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="10dp"
+                android:layout_height="wrap_content">
+
+                <!-- soal6-->
+                <TextView
+                    android:id="@+id/index_soal6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.AppCompat.Headline"
+                    android:fontFamily="@font/font_barruuu"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="20dp"
+                    android:text="Soal 6" />
+
+                <TextView
+                    android:id="@+id/soal6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_below="@id/index_soal6"
+                    android:layout_marginLeft="35dp"
+                    android:lineSpacingExtra="4dp"
+                    android:textSize="18sp"
+                    android:text="@string/soal6" />
+
+                <CheckBox
+                    android:id="@+id/dehidrasi"
+                    style="@style/color_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/soal6"
+                    android:textSize="16dp"
+                    android:textColor="#757575"
+                    android:text="@string/pil_soal6_1" />
+
+                <CheckBox
+                    android:id="@+id/lemas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    style="@style/color_checkbox"
+                    android:textColor="#757575"
+                    android:layout_below="@id/dehidrasi"
+                    android:text="@string/pil_soal6_2" />
+                <CheckBox
+                    android:id="@+id/demam"
+                    style="@style/color_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:textColor="#757575"
+                    android:layout_below="@id/lemas"
+                    android:text="@string/pil_soal6_3" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/r_soal7"
+                android:layout_width="match_parent"
+                android:layout_below="@id/r_soal6"
+                android:background="@drawable/shape"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="10dp"
+                android:layout_height="wrap_content">
+
+                <!--soal 7-->
+
+                <TextView
+                    android:id="@+id/index_soal7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.AppCompat.Headline"
+                    android:fontFamily="@font/font_barruuu"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="20dp"
+                    android:text="Soal 7" />
+
+                <TextView
+                    android:id="@+id/soal7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_below="@id/index_soal7"
+                    android:lineSpacingExtra="4dp"
+                    android:textSize="18sp"
+                    android:text="@string/soal7" />
+
+                <RadioGroup
+                    android:id="@+id/radio_soal7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/soal7">
+
+                    <RadioButton
+                        android:id="@+id/encer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pil_soal7_1"
+                        android:textColor="#757575"
+                        style="@style/color_checkbox"
+                        android:textSize="16dp" />
+
+                    <RadioButton
+                        android:id="@+id/keras"
+                        style="@style/color_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pil_soal7_2"
+                        android:textColor="#757575"
+                        android:textSize="16dp" />
+
+                    <RadioButton
+                        android:id="@+id/berdarah"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pil_soal7_3"
+                        android:textColor="#757575"
+                        style="@style/color_checkbox"
+                        android:textSize="16dp" />
+                </RadioGroup>
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/r_soal8"
+                android:layout_width="match_parent"
+                android:layout_below="@id/r_soal7"
+                android:background="@drawable/shape"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="10dp"
+                android:layout_height="wrap_content">
+
+            <!--soal8-->
+
+                <TextView
+                    android:id="@+id/index_soal8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.AppCompat.Headline"
+                    android:fontFamily="@font/font_barruuu"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="20dp"
+                    android:text="Soal 8" />
+
+                <TextView
+                    android:id="@+id/soal8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_below="@id/index_soal8"
+                    android:lineSpacingExtra="4dp"
+                    android:textSize="18sp"
+                    android:text="@string/soal8" />
+
+                <RadioGroup
+                    android:id="@+id/radio_soal8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/soal8">
+
+                    <RadioButton
+                        android:id="@+id/sulit_bab1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pil_soal8_1"
+                        android:textColor="#757575"
+                        style="@style/color_checkbox"
+                        android:textSize="16dp" />
+
+                    <RadioButton
+                        android:id="@+id/sulit_bab2"
+                        style="@style/color_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pil_soal8_2"
+                        android:textColor="#757575"
+                        android:textSize="16dp" />
+
+                    <RadioButton
+                        android:id="@+id/sulit_bab3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pil_soal8_3"
+                        android:textColor="#757575"
+                        style="@style/color_checkbox"
+                        android:textSize="16dp" />
+                </RadioGroup>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/r_soal9"
+                android:layout_width="match_parent"
+                android:layout_below="@id/r_soal8"
+                android:background="@drawable/shape"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="10dp"
+                android:layout_height="wrap_content">
+
+            <!--soal9-->
+
+                <TextView
+                    android:id="@+id/index_soal9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.AppCompat.Headline"
+                    android:fontFamily="@font/font_barruuu"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="20dp"
+                    android:text="Soal 9" />
+
+                <TextView
+                    android:id="@+id/soal9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_below="@id/index_soal9"
+                    android:lineSpacingExtra="4dp"
+                    android:textSize="18sp"
+                    android:text="@string/soal9" />
+
+                <RadioGroup
+                    android:id="@+id/radio_soal9"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@id/soal9"
+                    android:layout_height="wrap_content" >
+                    <RadioButton
+                        android:id="@+id/buang_air_kecil1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        style="@style/color_checkbox"
+                        android:textColor="#757575"
+                        android:text="@string/pil_soal9_1"
+                        />
+
+                    <RadioButton
+                        android:id="@+id/buang_air_kecil2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        style="@style/color_checkbox"
+                        android:textColor="#757575"
+                        android:text="@string/pil_soal9_2" />
+
+                    <RadioButton
+                        android:id="@+id/buang_air_kecil3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pil_soal9_3"
+                        android:textColor="#757575"
+                        style="@style/color_checkbox"
+                        android:textSize="16dp" />
+                </RadioGroup>
+
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/tombol_hasil"
+                android:layout_width="170dp"
+                android:layout_below="@id/r_soal9"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/font_barruuu"
+                android:text="Hasil Diagnosis"
+                android:background="@drawable/shape"
+                android:backgroundTint="#ffffff"
+                android:textSize="19sp"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
+
+

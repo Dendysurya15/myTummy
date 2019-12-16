@@ -34,14 +34,15 @@ import java.util.Objects;
 public class Fitur_Diagnosis extends AppCompatActivity {
     private List<String> list = new ArrayList<>();
     private List<String> gejala = new ArrayList<>();
+    private List<String> max_gejala = new ArrayList<>();
     private List<Double> tingkat_kemiripan;
-    private List<Double> list_tingkat_kemiripan;
 
-    private CheckBox c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15;
-    private RadioButton R16, R17, R18, R19, R20, R21;
+    private CheckBox c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12;
+    private RadioButton R13, R14, R15, R16, R17, R18, R19, R20, R21;
     private DatabaseReference database;
     private double kemiripan, jmlh_komponen_sama, jmlh_komponen_gejala, tingkat_kemiripan_tertinggi, treshold;
     private String text, hasil_akhir;
+    private int index_tertinggi;
 
 
     private ArrayList<ambilData> cobaAmbil;
@@ -64,9 +65,9 @@ public class Fitur_Diagnosis extends AppCompatActivity {
         c10 = (CheckBox) findViewById(R.id.dehidrasi);
         c11 = (CheckBox) findViewById(R.id.lemas);
         c12 = (CheckBox) findViewById(R.id.demam);
-        c13 = (CheckBox) findViewById(R.id.encer);
-        c14 = (CheckBox) findViewById(R.id.keras);
-        c15 = (CheckBox) findViewById(R.id.berdarah);
+        R13 = (RadioButton) findViewById(R.id.encer);
+        R14 = (RadioButton) findViewById(R.id.keras);
+        R15 = (RadioButton) findViewById(R.id.berdarah);
         R16 = (RadioButton) findViewById(R.id.sendawa_1);
         R17 = (RadioButton) findViewById(R.id.sulit_bab1);
         R18 = (RadioButton) findViewById(R.id.sulit_bab3);
@@ -131,17 +132,17 @@ public class Fitur_Diagnosis extends AppCompatActivity {
                     list.add("Demam");
                     c12.setChecked(false);
                 }
-                if (c13.isChecked()) {
+                if (R13.isChecked()) {
                     list.add("Tinja Menjadi Encer");
-                    c13.setChecked(false);
+                    R13.setChecked(false);
                 }
-                if (c14.isChecked()) {
+                if (R14.isChecked()) {
                     list.add("Feses Keras");
-                    c14.setChecked(false);
+                    R14.setChecked(false);
                 }
-                if (c15.isChecked()) {
+                if (R15.isChecked()) {
                     list.add("Feses Berdarah");
-                    c15.setChecked(false);
+                    R15.setChecked(false);
                 }
                 if (R16.isChecked()) {
                     list.add("Sering Bersendawa");
@@ -188,60 +189,56 @@ public class Fitur_Diagnosis extends AppCompatActivity {
                         }
                         int index = 0;
                         for (int i = 0; i < cobaAmbil.size(); i++) {
-
                             if (list.equals(gejala)) {
                                 text = "Penyakit " + cobaAmbil.get(index).getNama();
                                 hasil.setText(text);
                                 break;
                             } else {
-
-//                                jmlh_input = list.size();
-//                                System.out.println(list);
-//                                jmlh_komponen_gejala = cobaAmbil.get(0).getGejala().size();
-//                                cobaAmbil.get(0).getGejala().retainAll(list);
-//                                System.out.println(cobaAmbil.get(0).getGejala());
-//                                apayah = cobaAmbil.get(0).getGejala();
-//                                System.out.println(apayah.size());
-//                                jmlh_komponen_sama = apayah.size();
-//                                kemiripan = jmlh_komponen_sama/jmlh_komponen_gejala;
-//                                System.out.println(kemiripan);
-
                                 gejala = cobaAmbil.get(index).getGejala();
-//                            System.out.println(list);
-                                jmlh_komponen_gejala = gejala.size();
-//                                  System.out.println(gejala);
-                                gejala.retainAll(list);
-//                                  System.out.println(gejala);
-                                jmlh_komponen_sama = gejala.size();
-                                kemiripan = jmlh_komponen_sama / jmlh_komponen_gejala;
+                                System.out.println(list);
+//                                gejala.retainAll(list);
+                                System.out.println(gejala);
+                                if (list.size()>gejala.size()){
+                                    gejala.retainAll(list);
+                                    jmlh_komponen_sama = gejala.size();
+                                    jmlh_komponen_gejala = list.size();
+                                    kemiripan = jmlh_komponen_sama / jmlh_komponen_gejala;
+                                }
+                                else{
+                                    jmlh_komponen_gejala = gejala.size();
+                                    gejala.retainAll(list);
+                                    jmlh_komponen_sama = gejala.size();
+                                    kemiripan = jmlh_komponen_sama / jmlh_komponen_gejala;
+                                }
+//                                System.out.println(jmlh_komponen_sama = gejala.size());
+//                                kemiripan = jmlh_komponen_sama / jmlh_komponen_gejala;
+                                System.out.println(index);
+                                System.out.println(jmlh_komponen_sama);
+                                System.out.println(jmlh_komponen_gejala);
+//                                 System.out.println(gejala);
 //                                  System.out.println(kemiripan);
 //                                 Collections.sort(tingkat_kemiripan,Collections.reverseOrder());
                                 tingkat_kemiripan.add(kemiripan);
 //                                System.out.println(index);
 //                                System.out.println(tingkat_kemiripan);
-
                             }
 //                            tingkat_kemiripan.clear();
-
                             index++;
                         }
 
 
                         System.out.println(tingkat_kemiripan);
-                        double max = Collections.max(tingkat_kemiripan);
-
-                        
-                        if (max >= 0.7 && max <= 1.0) {
-                            System.out.println("ahha");
-                        } else if (max > 0.5 && max < 0.7) {
-                            System.out.println("sini gan");
+                        Double max = Collections.max(tingkat_kemiripan);
+                        int index_tertinggi = tingkat_kemiripan.indexOf(max);
+                        if (max >= 0.6 && max <= 1.0) {
+                            hasil_akhir =  "Penyakit " + cobaAmbil.get(index_tertinggi).getNama();
+                        }
+                        else{
+                            hasil_akhir = "Belum ditemukan penyakit dengan gejala tersebut";
                         }
 
-//                         Collections.sort(tingkat_kemiripan,Collections.reverseOrder());
-
-                        text = "Penyakit" + hasil_akhir;
+                        text = hasil_akhir;
                         hasil.setText(text);
-
                         list.clear();
                     }
 

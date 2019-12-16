@@ -14,6 +14,10 @@
         <item name="android:background">#E2F3FC</item>
     </style>
 
+    <style name="color_checkbox">
+        <item name="android:buttonTint">@color/colorPrimary</item>
+    </style>
+
     <style name="slider_screen" parent="Theme.AppCompat.Light.NoActionBar" >
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>

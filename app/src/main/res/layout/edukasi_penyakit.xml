@@ -24,7 +24,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/font_barruuu"
-        android:text="Edukasi Seputar Kesehatan Perut"
+        android:text="Edukasi Seputar Penyakit Perut"
         android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
         android:textColor="@color/fitur_warna_text"
         android:textSize="20sp" />

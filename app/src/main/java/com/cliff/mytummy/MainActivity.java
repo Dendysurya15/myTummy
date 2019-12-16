@@ -61,13 +61,14 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
         switch (id){
             case R.id.menu_reset:
-        PrefManager prefManager = new PrefManager(getApplicationContext());
-        prefManager.setFirstTimeLaunch(true);
-        startActivity(new Intent(MainActivity.this,SplashScreen.class));
-        finish();
-        break;
+                PrefManager prefManager = new PrefManager(getApplicationContext());
+                prefManager.setFirstTimeLaunch(true);
+                startActivity(new Intent(MainActivity.this,SplashScreen.class));
+                finish();
+                break;
         }
         return true;
     }
+
 
 }

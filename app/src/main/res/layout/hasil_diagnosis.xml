@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:background="@drawable/shape"
+        android:layout_height="wrap_content" >
+
+<!--        <ScrollView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical" >-->
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:paddingBottom="20dp"
+            android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/logoHasil"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            app:srcCompat="@drawable/logo_terus" />
+
+        <TextView
+            android:id="@+id/textAja"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Caption"
+            android:layout_marginBottom="10dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="17dp"
+            android:gravity="center"
+            android:layout_below="@+id/logoHasil"
+            android:text="Berdasarkan gejala yang dimasukkan" />
+
+        <TextView
+            android:id="@+id/hasil_diagnosis"
+            android:layout_below="@id/textAja"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="#e30b0b"
+            />
+
+<!--            <TextView-->
+<!--                android:id="@+id/text2"-->
+<!--                android:textColor="#666666"-->
+<!--                style="@style/TextAppearance.AppCompat.Subhead"-->
+<!--                android:layout_below="@id/hasil_diagnosis"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:visibility="invisible"-->
+<!--                android:layout_margin="15dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                />-->
+
+
+<!--            <ListView-->
+<!--                android:id="@+id/list_dilakukan"-->
+<!--                android:layout_below="@id/text2"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:listSelector="@android:color/transparent"-->
+<!--                android:cacheColorHint="@android:color/transparent"-->
+<!--                android:layout_height="wrap_content" />-->
+
+
+<!--            <TextView-->
+<!--                android:id="@+id/text3"-->
+<!--                android:textColor="#666666"-->
+<!--                style="@style/TextAppearance.AppCompat.Subhead"-->
+<!--                android:layout_below="@id/list_dilakukan"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:visibility="invisible"-->
+<!--                android:layout_margin="15dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="TextView" />-->
+
+
+
+<!--            <ListView-->
+<!--                android:id="@+id/list_dihindari"-->
+<!--                android:layout_below="@id/text3"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:listSelector="@android:color/transparent"-->
+<!--                android:cacheColorHint="@android:color/transparent"-->
+<!--                android:layout_height="wrap_content" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/text4"-->
+<!--                android:textColor="#666666"-->
+<!--                android:layout_margin="15dp"-->
+<!--                style="@style/TextAppearance.AppCompat.Subhead"-->
+<!--                android:layout_below="@id/list_dihindari"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:visibility="invisible"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                />-->
+
+<!--            <ListView-->
+<!--                android:id="@+id/list_obat"-->
+<!--                android:layout_below="@id/text4"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:listSelector="@android:color/transparent"-->
+<!--                android:cacheColorHint="@android:color/transparent"-->
+<!--                android:layout_height="wrap_content" />-->
+
+
+        </RelativeLayout>
+
+
+<!--            </RelativeLayout>-->
+<!--        </ScrollView>-->
+
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

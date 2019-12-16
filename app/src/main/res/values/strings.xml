@@ -18,16 +18,87 @@
         <item>@string/rekomendasi_text</item>
         <item>@string/edukasi_text</item>
     </array>
+
     <string name="app_name">My Tummy</string>
     <string name="title_activity_splash_screen">SplashScreen</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+
+
     <string name="diagnosis_perut">Pengguna dapat mengetahui penyakit perut yang sedang dialami berdasarkan gejala yang dirasakan</string>
-
-
     <string name="tindak_lanjut">Pengguna dapat mengetahui langkah-langkah yang sebaiknya dilakukan saat mengalami penyakit perut tertentu</string>
-
     <string name="rekomendasi_text">Pengguna dapat mengetahui obat-obat apa saja yang cocok sesuai dengan penyakit perut yang sedang dicari</string>
 
     <string name="edukasi_text">Pengguna dapat mengetahui lebih lengkap dan jelas tentang macam-macam penyakit perut seperti nama latin, gejala-gejala penyakit, penangangan pertama, rekomendasi obat dan lainnya</string>
+
+    <string name="notice">Perlu diketahui bawah data yang diisi hanya gejala-gejala yang anda rasakan saat ini tidak harus semua pertanyaan anda jawab!</string>
+
+    <string name="soal1">Apakah anda merasakan salah satu dari gejala nyeri berikut? </string>
+    <string name="pil_soal1_1">Nyeri di ulu hati (perut kanan atas)</string>
+    <string name="pil_soal1_2">Nyeri pada perut bagian kanan bawah</string>
+    <string name="pil_soal1_3">Nyeri pada perut bagian kiri bawah</string>
+    <string name="pil_soal1_4">Nyeri pada punggung dan bahu</string>
+
+    <string name="soal2">Apakah anda juga pernah mengalami gejala berikut pada sakit perut ?</string>
+    <string name="pil_soal2_1">Mual</string>
+    <string name="pil_soal2_2">Muntah</string>
+
+    <string name="soal3">Apakah pada saat ini anda sering bersendawa saat ini?</string>
+    <string name="pil_soal3_1">Ya, saya sering bersendawa saat ini</string>
+    <string name="pil_soal3_2">Tidak, saya berada pada kondisi normal</string>
+
+    <string name="soal4">Apa yang anda rasakan pada saat ini dibagian perut anda?</string>
+    <string name="pil_soal4_1">Rasa kram di perut</string>
+    <string name="pil_soal4_2">Perut Kembung</string>
+    <string name="pil_soal4_3">Mulas</string>
+
+    <string name="soal5">Apakah anda mengalami kesulitan dalam buang gas?</string>
+    <string name="pil_soal5_1">Ya, saya merasa kesulitan dalam buang gas</string>
+    <string name="pil_soal5_2">Tidak, saya berada pada kondisi normal</string>
+
+    <string name="soal6">Apakah pada saat ini tubuh anda mengalami hal berikut?</string>
+    <string name="pil_soal6_1">Dehidrasi</string>
+    <string name="pil_soal6_2">Tubuh menjadi lemas</string>
+    <string name="pil_soal6_3">Demam</string>
+
+
+    <string name="soal7">Jika saat ini sedang mengalami gejala sakit perut, seperti apakah keadaan feses anda pada saat melakukan BAB?</string>
+    <string name="pil_soal7_1">Feses encer</string>
+    <string name="pil_soal7_2">Feses keras</string>
+    <string name="pil_soal7_3">Feses berdarah</string>
+
+    <string name="soal8">Apakah saat ini anda berada pada kondisi kesulitan BAB ?</string>
+    <string name="pil_soal8_1">Ya, saya berada pada kondisi itu</string>
+    <string name="pil_soal8_2">Tidak, saya dalam keadaan normal</string>
+    <string name="pil_soal8_3">Sepertinya saya justru terlalu sering BAB</string>
+
+    <string name="soal9">Apakah saat ini anda mengalami kesulitan pada saat buang air kecil?</string>
+    <string name="pil_soal9_1">Ya, saya merasa kesulitan dalam buang air kecil</string>
+    <string name="pil_soal9_2">Tidak, saya dalam keadaan normal</string>
+    <string name="pil_soal9_3">Sepertinya saya justru terlalu sering buang air kecil</string>
+
+    <string name="nama1">Dendy Surya Darmawan</string>
+    <string name="nim1">17523078</string>
+    <string name="nama2">Indah Utami Ilyas</string>
+    <string name="nim2">17523139</string>
+    <string name="nama3">Naufal Alfiansyah Kurniawan</string>
+    <string name="nim3">17523194</string>
+    <string name="nama4">Saleh Asrori Suryani Wasmin</string>
+    <string name="nim4">17523191</string>
+    <string name="nama5">Bagus Anugrah Prasetyo</string>
+    <string name="nim5">17523224</string>
+    <string name="penjelasan_aplikasi">My Tummy merupakan aplikasi untuk mempermudah pengguna dalam mendiagnosa penyakit yang diderita melalui gejala-gejala yang dirasakan. Pengguna bisa menggunakan fitur lain yang tersedia seperti melihat rekomendasi obat, tindakan awal yang dilakukan dan juga melihat artikel tentang penyakit perut</string>
+    <string name="penjelasanTeam">Dibalik myTummy terdapat sebuah tim bernama Cliff yang terbagi atas programmer, design app, tester, serta document writer yang membantu banyak dalam membentuk dan menciptakan aplikasi ini</string>
+
+    <string-array name="nama_penyakit">
+        <item>Pilih Penyakit . . .</item>
+        <item>Batu Empedu</item>
+        <item>Batu Ginjal</item>
+        <item>Diare</item>
+        <item>Disentri</item>
+        <item>Kolera</item>
+        <item>Maag</item>
+        <item>Sembelit</item>
+        <item>Usus Buntu</item>
+    </string-array>
 </resources>

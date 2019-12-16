@@ -23,24 +23,22 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Fitur_Tindak_lanjut extends AppCompatActivity  implements AdapterView.OnItemSelectedListener{
+public class Fitur_Rekomendasi_Obat_Baru extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
     private DatabaseReference database;
     private String hasil;
     private ArrayList<ambilData> cobaAmbil;
     private Button btn;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fitur__tindak_lanjut);
-
+        setContentView(R.layout.activity_fitur__rekomendasi__obat__baru);
         database = FirebaseDatabase.getInstance().getReference();
-        final ListView list_dilakukan = (ListView) findViewById(R.id.list_dilakukan);
-        final ListView list_dihindari = (ListView) findViewById(R.id.list_dihindari);
+
+        final ListView list_obat = (ListView) findViewById(R.id.list_obat);
+
 
         Spinner spinner = findViewById(R.id.label_spinner);
-
         if (spinner != null) {
             spinner.setOnItemSelectedListener(this);
 
@@ -78,35 +76,27 @@ public class Fitur_Tindak_lanjut extends AppCompatActivity  implements AdapterVi
                             if (cobaAmbil.get(index).getNama().equals(hasil)) {
 
 
-                                List<String>  dilakukan = cobaAmbil.get(index).getDilakukan();
+                                //nampilin penyakit
+//                                textHasil.setText("Berikut merupakan beberapa hal yang harus dihindari dan dilakukan gejala penyakit "+cobaAmbil.get(index).getNama());
 
-                                List<String> dihindari = cobaAmbil.get(index).getDihindari();
+//                                list.add(cobaAmbil.get(index).getDilakukan());
+//                              tampilin list gejala
 
-                                ArrayAdapter<String> arrayAdapter1 = new ArrayAdapter<String>(Fitur_Tindak_lanjut.this,android.R.layout.simple_list_item_1,dihindari);
-                                list_dihindari.setAdapter(arrayAdapter1);
+                                List<String> obat = cobaAmbil.get(index).getObat();
 
-                                ArrayAdapter<String> arrayAdapter2 = new ArrayAdapter<String>(Fitur_Tindak_lanjut.this,android.R.layout.simple_list_item_1,dilakukan);
-                                list_dilakukan.setAdapter(arrayAdapter2);
-
-
+                                ArrayAdapter<String> arrayAdapter1 = new ArrayAdapter<String>(Fitur_Rekomendasi_Obat_Baru.this,android.R.layout.simple_list_item_1,obat);
+                                list_obat.setAdapter(arrayAdapter1);
+//
                                 TextView tv1 = (TextView)findViewById(R.id.text1);
                                 tv1.setVisibility(View.VISIBLE);
-                                tv1.setText("Hal yang harus dilakukan seseorang yang menderita gejala penyakit "+cobaAmbil.get(index).getNama()+" :");
-
-                                TextView tv2 = (TextView)findViewById(R.id.text2);
-                                tv2.setVisibility(View.VISIBLE);
-                                tv2.setText("Hal yang harus dihindari seseorang yang menderita gejala penyakit "+cobaAmbil.get(index).getNama()+" :");
-
+                                tv1.setText("Rekomendasi obat gejala penyakit " + cobaAmbil.get(index).getNama()+" :");
+//
                                 RelativeLayout hide = (RelativeLayout) findViewById(R.id.cobaRelative);
                                 hide.setVisibility(View.VISIBLE);
 
+                                list_obat.setAdapter(arrayAdapter1);
 
-                                list_dihindari.setAdapter(arrayAdapter1);
-                                list_dilakukan.setAdapter(arrayAdapter2);
-
-                                Utility.setListViewHeightBasedOnChildren(list_dihindari);
-                                Utility.setListViewHeightBasedOnChildren(list_dilakukan);
-
+                                Utility.setListViewHeightBasedOnChildren(list_obat);
                             }
                             index++;
                         }
@@ -124,7 +114,6 @@ public class Fitur_Tindak_lanjut extends AppCompatActivity  implements AdapterVi
 
             }
         });
-
     }
 
     @Override
@@ -150,6 +139,8 @@ public class Fitur_Tindak_lanjut extends AppCompatActivity  implements AdapterVi
             } else if (parent.getItemAtPosition(position).equals("Usus Buntu")) {
                 hasil = "Usus Buntu";
             }
+
+
         }
     }
 

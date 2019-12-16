@@ -5,7 +5,7 @@
             <!-- SHADOW -->
             <item>
                 <shape>
-                    <solid android:color="#E4E4E4"/>
+                    <solid android:color="#F1F3F4"/>
                     <!-- alttan gölge -->
                     <corners android:radius="10dp"/>
                 </shape>
@@ -14,12 +14,12 @@
               android:right="5px" to make it round-->
             <item
                 android:bottom="8px"
-                android:right="8px">
+                android:right="6px">
                 <shape>
                     <padding android:bottom="5dp"/>
                     <solid android:color="#ffffff"/>
                     <corners
-                        android:radius="10dp"/>
+                        android:radius="7dp"/>
                 </shape>
             </item>
         </layer-list>

@@ -75,8 +75,6 @@ public class adapterFitur extends RecyclerView.Adapter<adapterFitur.ViewHolder> 
         public void onClick(View view) {
 
             Fitur currentFitur = mFiturData.get(getAdapterPosition());
-
-
             currentFitur.setPosition(getAdapterPosition());
 
 //
@@ -100,7 +98,7 @@ public class adapterFitur extends RecyclerView.Adapter<adapterFitur.ViewHolder> 
                     mcontext.startActivity(intent2);
                     break;
                 case 2:
-                    Intent intent3 = new Intent(mcontext, Fitur_Rekomendasi_Obat.class);
+                    Intent intent3 = new Intent(mcontext, Fitur_Rekomendasi_Obat_Baru.class);
                     mcontext.startActivity(intent3);
                     break;
                 case 3:
