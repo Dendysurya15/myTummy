@@ -7,22 +7,35 @@
     android:paddingBottom="10dp"
     tools:context=".HomeFragment">
 
+    <ImageView
+        android:id="@+id/wallpaper"
+        android:layout_width="wrap_content"
+        android:scaleType="centerCrop"
+        android:layout_height="250dp"
+        android:src="@drawable/sakit_perut" />
+
     <View
         android:id="@+id/back_jumbotron"
         android:layout_width="wrap_content"
-        android:layout_height="170dp"
-        android:background="#3C94D1" />
+        android:layout_height="250dp"
+        android:background="#27638c"
+        android:alpha="0.8"
+         />
+
+
 
     <TextView
         android:id="@+id/title_app"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="20dp"
         android:fontFamily="@font/font_barruuu"
-        android:text="Selamat Datang,"
+        android:text="My Tummy"
+        android:textSize="30dp"
+        android:textStyle="bold"
         android:textColor="#ffffff"
-        android:textSize="16dp" />
+        style="@style/TextAppearance.AppCompat.Headline" />
 
     <TextView
         android:id="@+id/title_app2"
@@ -30,18 +43,63 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/title_app"
         android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textSize="12dp"
+        android:layout_marginTop="5dp"
         android:fontFamily="@font/font_barruuu"
-        android:text="Pada aplikasi diagnosis My Tummy!"
+        android:text="Merupakan aplikasi yang membantu anda dalam mendiagnosis penyakit perut saat ini anda rasakan, aplikasi ini juga menyediakan berbagai informasi seputar penyakit perut"
         android:textColor="#ffffff"
-        android:textSize="19dp" />
+        style="@style/TextAppearance.AppCompat.Caption"/>
+
+    <TextView
+        android:id="@+id/daftar_penyakit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_app2"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textSize="12dp"
+        android:textStyle="italic"
+        android:fontFamily="@font/font_barruuu"
+        android:layout_marginTop="10dp"
+        android:text="Daftar penyakit perut umum"
+        android:textColor="#ffffff"
+        style="@style/TextAppearance.AppCompat.Caption"/>
+
+    <TextView
+        android:id="@+id/line1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/daftar_penyakit"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textSize="12dp"
+        android:textStyle="italic"
+        android:fontFamily="@font/font_barruuu"
+        android:text="1. Maag                    5. Usus Buntu  \n2. Kolera                  6. Batu Empedu  \n3. Sembelit              7. Batu Ginjal       \n4. Disentri               8. Diare"
+        android:textColor="#ffffff"
+        style="@style/TextAppearance.AppCompat.Caption"/>
 
 
+    <TextView
+        android:id="@+id/fitur_kami"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wallpaper"
+        android:fontFamily="@font/font_barruuu"
+        android:text="Fitur Kami"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold"
+        android:textColor="#5782A0"
+        style="@style/TextAppearance.AppCompat.Headline" />
 
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="80dp"
+        android:layout_below="@id/fitur_kami"
         android:scrollbars="vertical" />
 </RelativeLayout>

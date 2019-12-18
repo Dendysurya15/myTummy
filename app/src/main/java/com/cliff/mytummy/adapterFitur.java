@@ -77,6 +77,7 @@ public class adapterFitur extends RecyclerView.Adapter<adapterFitur.ViewHolder> 
             Fitur currentFitur = mFiturData.get(getAdapterPosition());
             currentFitur.setPosition(getAdapterPosition());
 
+
 //
 //            Intent detailIntent = new Intent(mcontext, Fitur_Diagnosis.class);
 //////            detailIntent.putExtra("title", currentFitur.getTitle());

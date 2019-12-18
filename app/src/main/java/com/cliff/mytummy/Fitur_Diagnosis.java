@@ -9,8 +9,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -76,6 +78,7 @@ public class Fitur_Diagnosis extends AppCompatActivity {
         R21 = (RadioButton) findViewById(R.id.buang_gas1);
 
         database = FirebaseDatabase.getInstance().getReference();
+
         Button tmbl_button = (Button) findViewById(R.id.tombol_hasil);
         tmbl_button.setOnClickListener(new View.OnClickListener() {
 
@@ -83,6 +86,11 @@ public class Fitur_Diagnosis extends AppCompatActivity {
             public void onClick(View v) {
                 final AlertDialog.Builder mBuilder = new AlertDialog.Builder(Fitur_Diagnosis.this);
                 final View mView = getLayoutInflater().inflate(R.layout.hasil_diagnosis, null);
+//                final View mHindari = getLayoutInflater().inflate(R.layout.hasil_diagnosis, null);
+//                final View mLakukan = getLayoutInflater().inflate(R.layout.hasil_diagnosis, null);
+//                final View mObat = getLayoutInflater().inflate(R.layout.hasil_diagnosis, null);
+
+
                 final TextView hasil = mView.findViewById(R.id.hasil_diagnosis);
                 if (c1.isChecked()) {
                     list.add("Nyeri di area ulu hati (perut kanan atas)");
@@ -232,6 +240,28 @@ public class Fitur_Diagnosis extends AppCompatActivity {
                         int index_tertinggi = tingkat_kemiripan.indexOf(max);
                         if (max >= 0.6 && max <= 1.0) {
                             hasil_akhir =  "Penyakit " + cobaAmbil.get(index_tertinggi).getNama();
+//                            List<String> dihindari = cobaAmbil.get(index_tertinggi).getDihindari();
+//                            List<String>  dilakukan = cobaAmbil.get(index_tertinggi).getDilakukan();
+//                            List<String> obat = cobaAmbil.get(index_tertinggi).getObat();
+//
+//                            ArrayAdapter<String> arrayAdapter1 = new ArrayAdapter<String>(Fitur_Diagnosis.this,android.R.layout.simple_list_item_1,obat);
+//                            list_obat.setAdapter(arrayAdapter1);
+////                                listHasil.setAdapter(arrayAdapter);
+//
+//                            ArrayAdapter<String> arrayAdapter3 = new ArrayAdapter<String>(Fitur_Diagnosis.this,android.R.layout.simple_list_item_1,dihindari);
+//                            list_dihindari.setAdapter(arrayAdapter3);
+////                                listHasil.setAdapter(arrayAdapter);
+//
+//                            ArrayAdapter<String> arrayAdapter4 = new ArrayAdapter<String>(Fitur_Diagnosis.this,android.R.layout.simple_list_item_1,dilakukan);
+//                            list_dilakukan.setAdapter(arrayAdapter4);
+//
+//                            Utility.setListViewHeightBasedOnChildren(list_dihindari);
+//                            Utility.setListViewHeightBasedOnChildren(list_dilakukan);
+//                            Utility.setListViewHeightBasedOnChildren(list_obat);
+//
+//                            mBuilder.setView(mHindari);
+//                            mBuilder.setView(mLakukan);
+//                            mBuilder.setView(mObat);
                         }
                         else{
                             hasil_akhir = "Belum ditemukan penyakit dengan gejala tersebut";
